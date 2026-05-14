@@ -6,5 +6,5 @@ RUN             chmod +x gradlew && ./gradlew bootJar --no-daemon -x test
 
 #step 2 RUN
 From            docker.io/redhat/ubi9
-COPY            --from=builder /app/build/libs/portfolio-service.jar
+COPY            --from=builder /app/build/libs/portfolio-service.jar .
 ENTRYPOINT      ["java", "-jar", "./portfolio-service.jar"]
