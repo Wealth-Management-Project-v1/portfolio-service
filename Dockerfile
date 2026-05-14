@@ -1,5 +1,5 @@
 #step 1: BUILD
-FROM            docker.io/library/gradle:alpine-baselayout AS builder
+FROM            docker.io/library/openjdk:21 AS builder
 WORKDIR         /app
 COPY            . /app/
 RUN             chmod +x gradlew && ./gradlew bootJar --no-daemon -x test
