@@ -41,6 +41,5 @@ argocd-deploy:
 		--values values/portfolio-service.yaml \
 		--helm-set-string image_tag=$(image_tag)
 
-	argocd app sync portfolio-service
 	argocd app wait portfolio-service --health --timeout 300
 
